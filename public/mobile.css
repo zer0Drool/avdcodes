@@ -29,10 +29,6 @@ canvas {
     margin-bottom: 50px;
 }
 
-.show a {
-    /* word-break: break-all; */
-}
-
 #load-num {
     position: fixed;
     top: 0;
@@ -41,10 +37,4 @@ canvas {
 
 #email, #insta {
     display: block;
-}
-
-@media screen and (min-width: 770px) {
-    * {
-        /* font-size: 40px; */
-    }
 }

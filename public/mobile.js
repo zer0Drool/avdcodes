@@ -1,7 +1,7 @@
 (function() {
 
     console.log(' ');
-    console.log('AVD is a collaborative digital art project');
+    console.log('avd is a collaborative digital art project');
     console.log('email: avdgallery@gmail.com');
     console.log('insta: @avd.codes');
 
@@ -39,7 +39,6 @@
         suzanne.material.color.set(0x5870CA);
 
         scene.add(suzanne);
-        // suzanne.position.set(-5, 0, 0)
     })
 
     var directionalLight = new THREE.DirectionalLight( 0xffffff, 1.5 );

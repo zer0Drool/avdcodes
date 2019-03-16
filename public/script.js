@@ -1,7 +1,7 @@
 (function() {
 
 console.log(' ');
-console.log('AVD is a collaborative digital art project');
+console.log('avd is a collaborative digital art project');
 console.log('email: avdgallery@gmail.com');
 console.log('insta: @avd.codes');
 
@@ -12,7 +12,7 @@ var cubeX = document.getElementById('environment-cube');
 
 var scene = new THREE.Scene();
 
-var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+var camera = new THREE.PerspectiveCamera( 75, 1792/913.5, 0.1, 1000 );
 camera.position.z = 4;
 
 var renderer = new THREE.WebGLRenderer({antialias:true, alpha: true});

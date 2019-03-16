@@ -15,7 +15,6 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    /* font-size: 60px; */
 }
 
 #help {
@@ -29,7 +28,6 @@ body {
 
 #environment-wrap {
     perspective: 1000px;
-    /* perspective-origin: 50% 50%; */
 }
 
 #environment-cube {
