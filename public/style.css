@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+#load-num {
+    position: fixed;
+    top: 0;
+    right: 0;
+    /* font-size: 60px; */
+}
+
+#help {
+    position: fixed;
+    top: 10%;
+    left: 12%;
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+#environment-wrap {
+    perspective: 1000px;
+    /* perspective-origin: 50% 50%; */
+}
+
+#environment-cube {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    width: 500px;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(0px) translateY(-451px) translateZ(-1090px);
+    transition: all 1s;
+}
+
+.face {
+    position: absolute;
+}
+
+.face a, .face p {
+    font-size: 26px;
+}
+
+#environment-one {
+    transform: rotateX(0deg) rotateY(-134deg) rotateZ(0deg) translateX(380px) translateY(330px) translateZ(1340px);
+}
+
+#environment-seven {
+    width: 540px;
+    transform: rotateX(43deg) rotateY(-15deg) rotateZ(3deg) translateX(130px) translateY(-190px) translateZ(1540px);
+}
+
+#environment-eight {
+    transform: rotateX(60deg) rotateY(119deg) rotateZ(-65deg) translateX(-130px) translateY(1200px) translateZ(270px);
+}
+
+#avd {
+    position: absolute;
+    width: 80px;
+    top: -20px;
+    left: 5px;
+}
+
+#info {
+    position: absolute;
+    z-index: 2;
+    top: 730px;
+    left: 470px;
+    /* font-size: 22px; */
+}
+
+#about {
+    width: 400px;
+    transform: rotate(15deg);
+}
+
+#email {
+    display: block;
+    width: 400px;
+    margin-top: 20px;
+    margin-left: 0;
+    transform: rotate(18deg);
+}
+
+#insta {
+    display: block;
+    width: 400px;
+    margin-top: 20px;
+    margin-left: 0;
+    transform: rotate(21deg);
+}
+
+canvas {
+    top: 190px;
+    left: -640px;
+    z-index: -1;
+    position: absolute !important;
+    /* background-color: orange; */
+}
+
+@media screen and (max-height: 600px) {
+
+    body {
+        height: 600px;
+    }
+
+}
+@media screen and (max-width: 750px) {
+
+    body {
+        width: 750px;
+    }
+
+}
