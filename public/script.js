@@ -5,7 +5,7 @@ console.log('avd is a collaborative digital art project');
 console.log('email: avdgallery@gmail.com');
 console.log('insta: @avd.codes');
 
-console.log('%c       ', 'font-size: 420px; background: url(http://localhost:8080/positronic.png) no-repeat;');
+console.log('%c       ', 'font-size: 420px; background: url(http://www.avd.codes/positronic.png) no-repeat;');
 console.log(' ');
 
 var cubeX = document.getElementById('environment-cube');
