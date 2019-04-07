@@ -13,7 +13,8 @@ var cubeX = document.getElementById('environment-cube');
 var scene = new THREE.Scene();
 
 var camera = new THREE.PerspectiveCamera( 75, 1792/913.5, 0.1, 1000 );
-camera.position.z = 4;
+camera.position.z = 3;
+camera.position.y = 1;
 
 var renderer = new THREE.WebGLRenderer({antialias:true, alpha: true});
 cubeX.appendChild( renderer.domElement );
@@ -23,25 +24,52 @@ renderer.setSize( 1792, 913.5 );
 
 var suzanne;
 var loadNum = document.getElementById('load-num');
+var theDon;
+var loader = new THREE.GLTFLoader();
 
-var loaderTwo = new THREE.FontLoader();
-loaderTwo.load('TNR.json', function (font) {
-    var geometry = new THREE.TextGeometry('v2.0', {
-        font: font,
-		size: 1,
-		height: 0.1,
-		curveSegments: 15
-    });
-    geometry.center();
+loader.load(
+    '/ya.glb',
 
-    var material = new THREE.MeshPhongMaterial();
-    suzanne = new THREE.Mesh(geometry, material)
-    suzanne.material.color.set(0x5870CA);
+    function(gltf) {
+        console.log(gltf);
+        console.log(gltf.animations);
+        suzanne = gltf.scene;
+        suzanne.castShadow = true;
+        scene.add(suzanne);
+    },
 
-    scene.add(suzanne);
-})
+    function(xhr) {
+        theDon = (xhr.loaded / 3159408).toFixed(1);
+        console.log(theDon + ' loaded');
+        if (theDon > 0.9) {
+            loadNum.style.display = 'none';
+        }
+        loadNum.innerText = theDon;
+    },
 
-var directionalLight = new THREE.DirectionalLight( 0xffffff, 1.5 );
+    function (error) {
+		console.log('An error happened', error);
+	}
+)
+
+// var loaderTwo = new THREE.FontLoader();
+// loaderTwo.load('TNR.json', function (font) {
+//     var geometry = new THREE.TextGeometry('v2.0', {
+//         font: font,
+// 		size: 1,
+// 		height: 0.1,
+// 		curveSegments: 15
+//     });
+//     geometry.center();
+//
+//     var material = new THREE.MeshPhongMaterial();
+//     suzanne = new THREE.Mesh(geometry, material)
+//     suzanne.material.color.set(0x5870CA);
+//
+//     scene.add(suzanne);
+// })
+
+var directionalLight = new THREE.DirectionalLight( 0xffffff, 7 );
 directionalLight.position.set(0, -2, 5);
 scene.add( directionalLight );
 
@@ -50,9 +78,9 @@ var render = function () {
 requestAnimationFrame( render );
 
 if (suzanne) {
-  suzanne.rotation.x += 0.01;
+  // suzanne.rotation.x += 0.01;
   suzanne.rotation.y += 0.01;
-  suzanne.rotation.z += 0.005;
+  // suzanne.rotation.z += 0.005;
 }
 
 renderer.render(scene, camera);
