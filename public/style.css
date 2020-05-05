@@ -1,5 +1,12 @@
+@font-face {
+    font-family: spatial;
+    src: url(spatial.ttf);
+}
+
 * {
     margin: 0;
+    font-family: 'VT323', monospace;
+    /* color: lime; */
 }
 
 body {
@@ -9,6 +16,8 @@ body {
     overflow: hidden;
     width: 100vw;
     height: 100vh;
+    /* background-color: black; */
+    /* background: linear-gradient(black, grey); */
 }
 
 #load-num {
@@ -46,7 +55,7 @@ body {
 }
 
 .face a, .face p {
-    font-size: 26px;
+    font-size: 24px;
 }
 
 #environment-one {

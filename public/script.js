@@ -99,9 +99,9 @@ function init() {
     var positions = [
         ['0deg', '0deg', '0deg', '0px', '-451px', '-1090px'],
         ['0deg', '-10deg', '0deg', '30px', '-371px', '-80px'],
-        ['-2deg', '131deg', '10deg', '1342px', '-300px', '616px'],
-        ['45deg', '-90deg', '-15deg', '71px', '-1390px', '-104px'],
-        ['-43deg', '-3deg', '13deg', '333px', '1261px', '-1085px']
+        ['-2deg', '131deg', '10deg', '1512px', '-410px', '755px'],
+        ['45deg', '-90deg', '-15deg', '71px', '-1620px', '-104px'],
+        ['-43deg', '-3deg', '13deg', '333px', '1341px', '-1185px']
     ]
 
     document.addEventListener('keydown', (e) => {
